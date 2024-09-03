@@ -14,7 +14,7 @@
     <PropertyGroup>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFrameworks>net5.0</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
