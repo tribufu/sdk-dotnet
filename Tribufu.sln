@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Sdk", "src\Tribufu.Sdk\Tribufu.Sdk.csproj", "{C66D6B57-324D-EAF2-3B65-75C9A7C35054}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Native", "src\Tribufu.Native\Tribufu.Native.csproj", "{C66D6B57-324D-EAF2-3B65-75C9A7C35054}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Serialization", "src\Tribufu.Serialization\Tribufu.Serialization.csproj", "{322FE36B-9E9B-9E66-678F-36C4D3BAC0CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Serialization.Newtonsoft", "src\Tribufu.Serialization.Newtonsoft\Tribufu.Serialization.Newtonsoft.csproj", "{B7019B7B-A352-86BD-CCB6-747FB8661927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu", "src\Tribufu\Tribufu.csproj", "{7B7890D8-863A-4F1D-98C0-4B7D8C46CB52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Utils", "src\Tribufu.Utils\Tribufu.Utils.csproj", "{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,14 @@ Global
 		{B7019B7B-A352-86BD-CCB6-747FB8661927}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7019B7B-A352-86BD-CCB6-747FB8661927}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7019B7B-A352-86BD-CCB6-747FB8661927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7890D8-863A-4F1D-98C0-4B7D8C46CB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7890D8-863A-4F1D-98C0-4B7D8C46CB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7890D8-863A-4F1D-98C0-4B7D8C46CB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7890D8-863A-4F1D-98C0-4B7D8C46CB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

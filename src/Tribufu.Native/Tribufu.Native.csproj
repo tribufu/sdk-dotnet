@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Tribufu.Native</PackageId>
+        <Version>0.1.0</Version>
+        <Description>Tribufu Native Interop</Description>
+        <Authors>Tribufu</Authors>
+        <Company>Tribufu</Company>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Copyright>Copyright (c) Tribufu. All Rights Reserved.</Copyright>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/Tribufu/TribufuNet</RepositoryUrl>
+    </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <TargetFrameworks>netstandard2.0;net45;net5.0</TargetFrameworks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\..\vendor\windows-aarch64\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-arm64\native\" />
+        <None Include="..\..\vendor\windows-i686\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-x86\native\" />
+        <None Include="..\..\vendor\windows-x86_64\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-x64\native\" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>
