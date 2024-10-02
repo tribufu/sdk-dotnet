@@ -18,9 +18,9 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
-        <None Include="..\..\vendor\windows-aarch64\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-arm64\native\" />
-        <None Include="..\..\vendor\windows-i686\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-x86\native\" />
-        <None Include="..\..\vendor\windows-x86_64\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-x64\native\" />
+        <None Include="..\..\vendor\win-arm64\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-arm64\native\" />
+        <None Include="..\..\vendor\win-x64\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-x64\native\" />
+        <None Include="..\..\vendor\win-x86\tribufu_sdk.dll" Pack="true" PackagePath="runtimes\win-x86\native\" />
     </ItemGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\" />

@@ -32,20 +32,13 @@ namespace Tribufu.Utils
         {
             var binDirectory = Path.Combine(GetBaseDirectory(), "bin");
 
-            switch (RuntimeInformation.RuntimeIdentifier)
+            if (!string.IsNullOrEmpty(RuntimeInformation.RuntimeIdentifier))
             {
-                case "win-x64":
-                    binDirectory = Path.Combine(binDirectory, "windows-x86_64");
-                    break;
-                case "osx-x64":
-                    binDirectory = Path.Combine(binDirectory, "mac-x86_64");
-                    break;
-                case "linux-x64":
-                    binDirectory = Path.Combine(binDirectory, "linux-x86_64");
-                    break;
-                default:
-                    binDirectory = Path.Combine(binDirectory, "dotnet");
-                    break;
+                binDirectory = Path.Combine(binDirectory, RuntimeInformation.RuntimeIdentifier);
+            }
+            else
+            {
+                binDirectory = Path.Combine(binDirectory, "dotnet");
             }
 
             return binDirectory;
