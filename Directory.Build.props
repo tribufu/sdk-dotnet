@@ -1,0 +1,13 @@
+<Project>
+    <PropertyGroup>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <Authors>Tribufu</Authors>
+        <Company>Tribufu</Company>
+        <Copyright>Copyright (c) Tribufu. All Rights Reserved.</Copyright>
+        <FileVersion>1.0.0.0</FileVersion>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/Tribufu/TribufuNet</RepositoryUrl>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+</Project>

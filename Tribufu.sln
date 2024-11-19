@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu", "src\Tribufu\Trib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Utils", "src\Tribufu.Utils\Tribufu.Utils.csproj", "{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.ComponentModel", "src\Tribufu.ComponentModel\Tribufu.ComponentModel.csproj", "{3DFBC35E-62A7-4CB0-81D9-5E7AA1882557}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F16FBBB-199E-4EE3-BFF3-31DD6F84DCD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DFBC35E-62A7-4CB0-81D9-5E7AA1882557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFBC35E-62A7-4CB0-81D9-5E7AA1882557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFBC35E-62A7-4CB0-81D9-5E7AA1882557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFBC35E-62A7-4CB0-81D9-5E7AA1882557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

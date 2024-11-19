@@ -1,15 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Tribufu</PackageId>
-        <Version>0.1.0</Version>
         <Description>Tribufu .NET SDK</Description>
-        <Authors>Tribufu</Authors>
-        <Company>Tribufu</Company>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <Copyright>Copyright (c) Tribufu. All Rights Reserved.</Copyright>
-        <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/Tribufu/TribufuNet</RepositoryUrl>
     </PropertyGroup>
     <PropertyGroup>
         <OutputType>Library</OutputType>
@@ -18,9 +11,14 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Tribufu.Native\Tribufu.Native.csproj" />
+        <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="README.md" Pack="true" PackagePath="\" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="System.ComponentModel.Annotations" />
+        <PackageReference Include="System.Net.Http" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Tribufu.Native\Tribufu.Native.csproj" />
     </ItemGroup>
 </Project>
