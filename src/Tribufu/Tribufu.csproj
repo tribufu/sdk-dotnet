@@ -17,6 +17,7 @@
         <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
+        <PackageReference Include="dotenv.net" />
         <PackageReference Include="JsonSubTypes" />
         <PackageReference Include="Newtonsoft.Json" />
         <PackageReference Include="Polly" />

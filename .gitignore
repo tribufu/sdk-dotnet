@@ -3,5 +3,7 @@ bin/
 obj/
 
 .DS_Store
+.env
 *.filters
 *.user
+desktop.ini
