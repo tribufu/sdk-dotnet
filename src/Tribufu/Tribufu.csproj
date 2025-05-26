@@ -1,24 +1,26 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageId>Tribufu</PackageId>
         <Description>Tribufu .NET SDK</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
     <PropertyGroup>
-        <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <TargetFrameworks>netstandard2.0;net45;net5.0</TargetFrameworks>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>annotations</Nullable>
+        <OutputType>Library</OutputType>
+        <TargetFrameworks>net6.0</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
+        <PackageReference Include="JsonSubTypes" />
         <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="Polly" />
+        <PackageReference Include="RestSharp" />
         <PackageReference Include="System.ComponentModel.Annotations" />
-        <PackageReference Include="System.Net.Http" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\Tribufu.Native\Tribufu.Native.csproj" />
     </ItemGroup>
 </Project>

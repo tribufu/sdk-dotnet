@@ -2,6 +2,6 @@
 bin/
 obj/
 
+.DS_Store
 *.filters
 *.user
-.DS_Store
