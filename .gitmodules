@@ -1,3 +1,0 @@
-[submodule "vendor/dotnet-utils"]
-	path = vendor/dotnet-utils
-	url = https://github.com/tribufu/dotnet-utils
