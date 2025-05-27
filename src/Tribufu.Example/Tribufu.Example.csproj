@@ -6,6 +6,9 @@
         <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
+        <PackageReference Include="dotenv.net" />
+    </ItemGroup>
+    <ItemGroup>
         <ProjectReference Include="..\Tribufu\Tribufu.csproj" />
     </ItemGroup>
 </Project>
