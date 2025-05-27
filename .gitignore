@@ -2,6 +2,8 @@
 bin/
 obj/
 
+.DS_Store
+.env
 *.filters
 *.user
-.DS_Store
+desktop.ini
