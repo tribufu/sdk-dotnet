@@ -14,7 +14,7 @@ namespace Tribufu
     /// <remarks>
     /// Use this class to interact with the Tribufu API.
     /// </remarks>
-    public class TribufuApi : TribufuGeneratedApi
+    public sealed class TribufuApi : TribufuGeneratedApi
     {
         /// <summary>
         /// The default base URL for the Tribufu API.
