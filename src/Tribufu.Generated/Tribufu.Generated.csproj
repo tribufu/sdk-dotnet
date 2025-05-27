@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <PackageId>Tribufu</PackageId>
+        <PackageId>Tribufu.Generated</PackageId>
         <Description>Tribufu .NET SDK</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
@@ -17,6 +17,11 @@
         <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Tribufu.Generated\Tribufu.Generated.csproj" />
+        <PackageReference Include="dotenv.net" />
+        <PackageReference Include="JsonSubTypes" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="Polly" />
+        <PackageReference Include="RestSharp" />
+        <PackageReference Include="System.ComponentModel.Annotations" />
     </ItemGroup>
 </Project>

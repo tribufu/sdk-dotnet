@@ -2,8 +2,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
 using dotenv.net;
-using Tribufu.Api;
-using Tribufu.Client;
+using Tribufu.Generated.Client;
 
 namespace Tribufu.Test
 {
@@ -13,31 +12,19 @@ namespace Tribufu.Test
         {
             DotEnv.Load(new DotEnvOptions(ignoreExceptions: true, envFilePaths: [".env", "../../.env"]));
 
-            var config = new Configuration
-            {
-                BasePath = "https://api.tribufu.com"
-            };
-
             var apiKey = Environment.GetEnvironmentVariable("TRIBUFU_API_KEY");
-            if (!string.IsNullOrEmpty(apiKey))
-            {
-                config.AddApiKey("Authorization", "DvyTVeT6EBsvqsPE1mRuW7ewwiP1f9playWE9wLTmdXnCuBQqBrluhU0p1KXYaRi");
-                config.AddApiKeyPrefix("Authorization", "ApiKey");
-            }
+            var tribufu = new TribufuApi(apiKey ?? "");
 
-            var tribufu = new TribufuApi(config);
+            Console.WriteLine(TribufuApi.GetVersion());
 
             try
             {
                 var result = await tribufu.GetUserInfoAsync();
-                Console.WriteLine("Result:");
                 Console.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Console.WriteLine("---- API Error ----");
-                Console.WriteLine($"Status: {e.ErrorCode}");
-                Console.WriteLine($"Details: {e.Data}");
+                Console.WriteLine(e.Message);
             }
         }
     }
