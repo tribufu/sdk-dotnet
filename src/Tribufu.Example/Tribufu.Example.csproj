@@ -9,6 +9,7 @@
         <PackageReference Include="dotenv.net" />
     </ItemGroup>
     <ItemGroup>
+        <ProjectReference Include="..\Tribufu.Logging\Tribufu.Logging.csproj" />
         <ProjectReference Include="..\Tribufu\Tribufu.csproj" />
     </ItemGroup>
 </Project>
