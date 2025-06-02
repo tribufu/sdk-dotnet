@@ -22,22 +22,9 @@ namespace Tribufu
         public const string DefaultBaseUrl = "https://api.tribufu.com";
 
         /// <summary>
-        /// Create a <see cref="TribufuApi"/> with the default options.
+        /// Create a <see cref="TribufuApi"/> instance.
         /// </summary>
-        /// <returns><see cref="TribufuApi"/> instance with default configuration</returns>
-        public TribufuApi() : this(string.Empty)
-        {
-        }
-
-        /// <summary>
-        /// Create a <see cref="TribufuApi"/> with the given API key.
-        /// </summary>
-        /// <remarks>
-        /// A API key gives you public read only access to the Tribufu API.
-        /// </remarks>
-        /// <param name="apiKey">The API key for authentication</param>
-        /// <returns><see cref="TribufuApi"/> instance configured with the API key</returns>
-        public TribufuApi(string apiKey) : base(CreateConfiguration(apiKey))
+        public TribufuApi(string? apiKey = null) : base(CreateConfiguration(apiKey))
         {
         }
 
@@ -118,12 +105,25 @@ namespace Tribufu
         /// <summary>
         /// Gets the user agent string for the Tribufu API client.
         /// </summary>
-        private static string GetUserAgent()
+        public static string GetUserAgent()
         {
             var version = GetVersion();
             var frameworkDescription = RuntimeInformation.FrameworkDescription.Trim();
             var runtimeIdentifier = RuntimeInformation.RuntimeIdentifier.Trim();
             return $"Tribufu/{version} ({frameworkDescription}; {runtimeIdentifier})";
+        }
+
+        /// <summary>
+        /// Checks if debug mode is enabled.
+        /// </summary>
+        /// <returns>True if debug mode is enabled, otherwise false</returns>
+        public static bool DebugEnabled()
+        {
+#if DEBUG
+            return true;
+#else
+            return  false;
+#endif
         }
 
         /// <summary>
@@ -148,22 +148,9 @@ namespace Tribufu
         }
 
         /// <summary>
-        /// Checks if debug mode is enabled.
-        /// </summary>
-        /// <returns>True if debug mode is enabled, otherwise false</returns>
-        private static bool DebugEnabled()
-        {
-#if DEBUG
-            return true;
-#else
-            return  false;
-#endif
-        }
-
-        /// <summary>
         /// Creates a configuration for the Tribufu API client.
         /// </summary>
-        private static Configuration CreateConfiguration(string apiKey)
+        private static Configuration CreateConfiguration(string? apiKey)
         {
             var config = new Configuration
             {
