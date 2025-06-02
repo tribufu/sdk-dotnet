@@ -1,1 +1,1 @@
-# Tribufu
+# Tribufu Configuration
