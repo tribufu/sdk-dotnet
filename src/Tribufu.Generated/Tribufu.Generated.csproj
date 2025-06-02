@@ -9,6 +9,7 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <ImplicitUsings>enable</ImplicitUsings>
+        <IsPublishable>false</IsPublishable>
         <Nullable>annotations</Nullable>
         <OutputType>Library</OutputType>
         <TargetFrameworks>net6.0</TargetFrameworks>

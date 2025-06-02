@@ -1,6 +1,7 @@
 // Copyright (c) Tribufu. All Rights Reserved.
 // SPDX-License-Identifier: MIT
 
+using System;
 using System.Net;
 using System.Runtime.InteropServices;
 using Tribufu.Generated.Api;
