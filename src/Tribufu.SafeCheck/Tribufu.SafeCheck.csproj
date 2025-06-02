@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageId>Tribufu.SafeCheck</PackageId>
+        <Description>Tribufu SafeCheck</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+    <PropertyGroup>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <TargetFrameworks>net6.0</TargetFrameworks>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="RestSharp" />
+        <PackageReference Include="System.ComponentModel.Annotations" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Tribufu\Tribufu.csproj" />
+    </ItemGroup>
+</Project>

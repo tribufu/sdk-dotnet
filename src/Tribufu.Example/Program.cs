@@ -3,6 +3,7 @@
 
 using dotenv.net;
 using Tribufu.Generated.Client;
+using Tribufu.SafeCheck;
 
 namespace Tribufu.Test
 {
@@ -19,7 +20,9 @@ namespace Tribufu.Test
 
             try
             {
-                var result = await tribufu.GetUserInfoAsync();
+                //var result = await tribufu.GetUserInfoAsync();
+                var safecheck = new TribufuSafeCheck(apiKey, "http://localhost:5100");
+                var result = await safecheck.CheckImageAsync("");
                 Console.WriteLine(result);
             }
             catch (ApiException e)
