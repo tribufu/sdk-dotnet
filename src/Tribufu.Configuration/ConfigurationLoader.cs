@@ -9,7 +9,7 @@ using Tribufu.Runtime;
 
 namespace Tribufu.Configuration
 {
-    public static class ConfigurationManager
+    public static class ConfigurationLoader
     {
         public static IConfiguration Configuration { get; private set; }
 
