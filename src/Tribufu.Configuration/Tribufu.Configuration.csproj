@@ -9,7 +9,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IsPublishable>false</IsPublishable>
         <OutputType>Library</OutputType>
-        <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+        <TargetFrameworks>net6.0</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\" />
@@ -26,6 +26,6 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Tribufu.Logging\Tribufu.Logging.csproj" />
-        <ProjectReference Include="..\Tribufu.Runtime\Tribufu.Runtime.csproj" />
+        <ProjectReference Include="..\Tribufu.Platform\Tribufu.Platform.csproj" />
     </ItemGroup>
 </Project>

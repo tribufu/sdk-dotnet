@@ -21,6 +21,6 @@
     <ItemGroup>
         <ProjectReference Include="..\Tribufu.Configuration\Tribufu.Configuration.csproj" />
         <ProjectReference Include="..\Tribufu.Logging\Tribufu.Logging.csproj" />
-        <ProjectReference Include="..\Tribufu.Runtime\Tribufu.Runtime.csproj" />
+        <ProjectReference Include="..\Tribufu.Platform\Tribufu.Platform.csproj" />
     </ItemGroup>
 </Project>

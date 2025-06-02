@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <PackageId>Tribufu.Runtime</PackageId>
+        <PackageId>Tribufu.Platform</PackageId>
         <Description>Tribufu Runtime Extensions</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
@@ -9,12 +9,13 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IsPublishable>false</IsPublishable>
         <OutputType>Library</OutputType>
-        <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+        <TargetFrameworks>net5.0</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
     <ItemGroup>
+        <ProjectReference Include="..\Tribufu.ComponentModel\Tribufu.ComponentModel.csproj" />
         <ProjectReference Include="..\Tribufu.Logging\Tribufu.Logging.csproj" />
     </ItemGroup>
 </Project>

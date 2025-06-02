@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Logging", "src\Trib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Configuration", "src\Tribufu.Configuration\Tribufu.Configuration.csproj", "{C0A841C8-9FC5-4AC0-B9AD-6BBFCEDCBE5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Runtime", "src\Tribufu.Runtime\Tribufu.Runtime.csproj", "{26EEB407-733C-4383-9211-B083CD5F593B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Platform", "src\Tribufu.Platform\Tribufu.Platform.csproj", "{26EEB407-733C-4383-9211-B083CD5F593B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tribufu.Database", "src\Tribufu.Database\Tribufu.Database.csproj", "{E7F9A76F-C087-410B-B4B5-A928A6CDC2BA}"
 EndProject

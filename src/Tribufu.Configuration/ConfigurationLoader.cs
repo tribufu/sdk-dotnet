@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using Tomlyn.Extensions.Configuration;
 using Tribufu.Logging;
-using Tribufu.Runtime;
+using Tribufu.Platform;
 
 namespace Tribufu.Configuration
 {
@@ -15,7 +15,7 @@ namespace Tribufu.Configuration
 
         public static IConfiguration Load(string[] fileNames)
         {
-            var configDirectory = ApplicationContext.GetConfigDirectory();
+            var configDirectory = Paths.GetApplicationConfigDirectory();
             var configurationBuilder = new ConfigurationBuilder();
             configurationBuilder.AddEnvironmentVariables();
 

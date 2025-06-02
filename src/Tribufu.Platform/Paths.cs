@@ -6,13 +6,13 @@ using System.IO;
 using System.Runtime.InteropServices;
 using Tribufu.Logging;
 
-namespace Tribufu.Runtime
+namespace Tribufu.Platform
 {
     /// <summary>
-    /// Provides standardized access to important application directories, such as config, saved data, logs, and platform-specific binaries.
+    /// Provides standardized access to important directories, such as config, saved data, logs, and platform-specific binaries.
     /// This is especially useful for abstracting file path logic across environments (development, production, etc).
     /// </summary>
-    public static class ApplicationContext
+    public static class Paths
     {
         /// <summary>
         /// Gets the root base directory of the application.
@@ -23,7 +23,7 @@ namespace Tribufu.Runtime
         /// - It uses case-insensitive checks and runtime heuristics to improve accuracy.
         /// </remarks>
         /// <returns>The absolute path to the base directory.</returns>
-        public static string GetBaseDirectory()
+        public static string GetApplicationDirectory()
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Tribufu.Runtime
             }
             catch (Exception ex)
             {
-                Logger.Warn($"(ApplicationContext) Failed to resolve base directory: {ex.Message}");
+                Logger.Warn($"(Paths) Failed to resolve base directory: {ex.Message}");
                 return AppContext.BaseDirectory;
             }
         }
@@ -58,22 +58,10 @@ namespace Tribufu.Runtime
         /// The absolute path to <c>bin/&lt;runtime-identifier&gt;</c> if available,
         /// otherwise falls back to <c>bin/dotnet</c>.
         /// </returns>
-        public static string GetBinDirectory()
+        public static string GetApplicationBinDirectory()
         {
-            var binDirectory = Path.Combine(GetBaseDirectory(), "bin");
+            var binDirectory = Path.Combine(GetApplicationDirectory(), "bin");
 
-#if NETSTANDARD
-            var runtimeIdentifier = GetRuntimeIdentifierLegacy();
-
-            if (!string.IsNullOrEmpty(runtimeIdentifier))
-            {
-                binDirectory = Path.Combine(binDirectory, runtimeIdentifier);
-            }
-            else
-            {
-                binDirectory = Path.Combine(binDirectory, "dotnet");
-            }
-#else
             if (!string.IsNullOrEmpty(RuntimeInformation.RuntimeIdentifier))
             {
                 binDirectory = Path.Combine(binDirectory, RuntimeInformation.RuntimeIdentifier);
@@ -82,102 +70,53 @@ namespace Tribufu.Runtime
             {
                 binDirectory = Path.Combine(binDirectory, "dotnet");
             }
-#endif
 
             return binDirectory;
-        }
-
-        private static string GetRuntimeIdentifierLegacy()
-        {
-            string osPart;
-            PlatformID platform = Environment.OSVersion.Platform;
-
-            switch (platform)
-            {
-                case PlatformID.Win32NT:
-                    osPart = "win";
-                    break;
-                case PlatformID.Unix:
-                    if (IsMacOS())
-                        osPart = "osx";
-                    else
-                        osPart = "linux";
-                    break;
-                case PlatformID.MacOSX:
-                    osPart = "osx";
-                    break;
-                default:
-                    osPart = "unknown";
-                    break;
-            }
-
-            var archPart = Environment.Is64BitProcess ? "x64" : "x86";
-            if (osPart == "unknown")
-            {
-                return null;
-            }
-
-            return $"{osPart}-{archPart}";
-        }
-
-        private static bool IsMacOS()
-        {
-            if (Environment.OSVersion.Platform == PlatformID.Unix)
-            {
-                Version version = Environment.OSVersion.Version;
-
-                if (version.Major >= 19)
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         /// <summary>
         /// Gets the path to the configuration directory.
         /// </summary>
         /// <returns>The absolute path to the <c>config</c> directory.</returns>
-        public static string GetConfigDirectory()
+        public static string GetApplicationConfigDirectory()
         {
-            return Path.Combine(GetBaseDirectory(), "config");
+            return Path.Combine(GetApplicationDirectory(), "config");
         }
 
         /// <summary>
         /// Gets the path to the assets directory.
         /// </summary>
         /// <returns>The absolute path to the <c>assets</c> directory.</returns>
-        public static string GetAssetsDirectory()
+        public static string GetApplicationAssetsDirectory()
         {
-            return Path.Combine(GetBaseDirectory(), "assets");
+            return Path.Combine(GetApplicationDirectory(), "assets");
         }
 
         /// <summary>
         /// Gets the path to the saved data directory.
         /// </summary>
         /// <returns>The absolute path to the <c>saved</c> directory.</returns>
-        public static string GetSavedDirectory()
+        public static string GetApplicationSavedDirectory()
         {
-            return Path.Combine(GetBaseDirectory(), "saved");
+            return Path.Combine(GetApplicationDirectory(), "saved");
         }
 
         /// <summary>
         /// Gets the path to the cache directory inside <c>saved</c>.
         /// </summary>
         /// <returns>The absolute path to the <c>saved/cache</c> directory.</returns>
-        public static string GetCacheDirectory()
+        public static string GetApplicationCacheDirectory()
         {
-            return Path.Combine(GetSavedDirectory(), "cache");
+            return Path.Combine(GetApplicationSavedDirectory(), "cache");
         }
 
         /// <summary>
         /// Gets the path to the logs directory inside <c>saved</c>.
         /// </summary>
         /// <returns>The absolute path to the <c>saved/logs</c> directory.</returns>
-        public static string GetLogsDirectory()
+        public static string GetApplicationLogsDirectory()
         {
-            return Path.Combine(GetSavedDirectory(), "logs");
+            return Path.Combine(GetApplicationSavedDirectory(), "logs");
         }
     }
 }
