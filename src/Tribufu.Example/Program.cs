@@ -11,7 +11,7 @@ namespace Tribufu.Test
     {
         public static async Task Main(string[] args)
         {
-            Logger.Initialize(LogLevel.All);
+            Logger.Initialize(LogLevel.Trace);
 
             DotEnv.Load(new DotEnvOptions(ignoreExceptions: true, envFilePaths: [".env", "../../.env"]));
 

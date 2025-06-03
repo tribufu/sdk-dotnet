@@ -7,16 +7,14 @@ namespace Tribufu.Logging
     {
         Off = 0,
 
-        Trace = 1,
+        Error = 1,
 
-        Debug = 2,
+        Warn = 2,
 
         Info = 3,
 
-        Warn = 4,
+        Debug = 4,
 
-        Error = 5,
-
-        All = 6,
+        Trace = 5,
     }
 }

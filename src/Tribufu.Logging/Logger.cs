@@ -41,12 +41,7 @@ namespace Tribufu.Logging
 
         private static void Log(LogLevel level, string message, ConsoleColor color)
         {
-            if (_level == LogLevel.Off)
-            {
-                return;
-            }
-
-            if (_level == LogLevel.All || level >= _level)
+            if (level <= _level)
             {
                 var defaultColor = Console.ForegroundColor;
                 Console.ForegroundColor = color;
