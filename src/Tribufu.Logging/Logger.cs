@@ -36,7 +36,7 @@ namespace Tribufu.Logging
 
         public static void Trace(string message)
         {
-            Log(LogLevel.Trace, message, ConsoleColor.Gray);
+            Log(LogLevel.Trace, message, ConsoleColor.DarkGray);
         }
 
         private static void Log(LogLevel level, string message, ConsoleColor color)
