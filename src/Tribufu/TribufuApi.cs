@@ -42,7 +42,7 @@ namespace Tribufu
         /// Create a <see cref="TribufuApi"/> with the given API key.
         /// </summary>
         /// <remarks>
-        /// A API key gives you public read only access to the Tribufu API.
+        /// An API key gives you public read only access to the Tribufu API.
         /// </remarks>
         /// <param name="apiKey">The API key for authentication</param>
         /// <returns><see cref="TribufuApi"/> instance configured with the API key</returns>
