@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <IsPublishable>false</IsPublishable>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <UseAppHost>false</UseAppHost>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="CppAst.CodeGen" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Tribufu.Platform\Tribufu.Platform.csproj" />
+    </ItemGroup>
+</Project>
