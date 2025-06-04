@@ -18,7 +18,7 @@ namespace Tribufu.Test
             var apiKey = Environment.GetEnvironmentVariable("TRIBUFU_API_KEY");
             var tribufu = new TribufuApi(apiKey ?? "");
 
-            Logger.Debug(TribufuApi.GetVersion());
+            Logger.Debug(TribufuApi.GetUserAgent());
 
             try
             {
