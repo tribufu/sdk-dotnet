@@ -8,7 +8,6 @@
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <ImplicitUsings>enable</ImplicitUsings>
         <IsPublishable>false</IsPublishable>
         <Nullable>annotations</Nullable>
         <OutputType>Library</OutputType>

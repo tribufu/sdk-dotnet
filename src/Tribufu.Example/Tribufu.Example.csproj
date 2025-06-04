@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <ImplicitUsings>enable</ImplicitUsings>
         <IsPublishable>false</IsPublishable>
         <Nullable>enable</Nullable>
         <OutputType>Exe</OutputType>
