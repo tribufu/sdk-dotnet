@@ -14,6 +14,31 @@ namespace Tribufu.Logging
             _level = level;
         }
 
+        public static void Info(object context, string message)
+        {
+            Info($"({context.GetType().Name}) {message}");
+        }
+
+        public static void Warn(object context, string message)
+        {
+            Warn($"({context.GetType().Name}) {message}");
+        }
+
+        public static void Error(object context, string message)
+        {
+            Error($"({context.GetType().Name}) {message}");
+        }
+
+        public static void Debug(object context, string message)
+        {
+            Debug($"({context.GetType().Name}) {message}");
+        }
+
+        public static void Trace(object context, string message)
+        {
+            Trace($"({context.GetType().Name}) {message}");
+        }
+
         public static void Info(string message)
         {
             Log(LogLevel.Info, message, ConsoleColor.Green);
